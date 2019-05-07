@@ -231,7 +231,7 @@ moment.locale('ar-TN');
       });
 
 
-const developers = ["529336434939920395"]
+const developers = ["534314527643140101"]
 client.on('message', message => {
     var argresult = message.content.split(` `).slice(1).join(' ');
       if (!developers.includes(message.author.id)) return;
