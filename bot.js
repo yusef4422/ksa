@@ -1,6 +1,16 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
 const prefix = "#";
+client.on('ready', () => {
+   console.log(`----------------`);
+      console.log(`BOT STARTED`);
+        console.log(`---------------`);
+      console.log(`ON ${client.guilds.size} Servers `);
+    console.log(`---------------`);
+  console.log(`Logged in as ${client.user.tag}!`);
+  client.user.setGame(`امر التشغيل|#quran|Louis.`,"http://twitch.tv/vAmmvr_");
+   client.user.setStatus("idle");
+});
 client.on('message',async message => {
     if(message.author.bot || message.channel.type === 'dm') return;
     let cmd = message.content.split(" ")[0].substring(prefix.length);
